@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #004b58;
+}
+
+.container {
+    position: relative;
+}
+
+.face {
+    width: 200px;
+    height: 200px;
+    background-color: #ebe4be;
+    clip-path: polygon(51% 0, 91% 0, 88% 61%, 57% 100%, 47% 99%, 12% 60%, 10% 0);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+/* หู */
+.ear {
+    width: 40px;
+    height: 70px;
+    background-color: #ebe4bed2;
+    position: absolute;
+    top: 30px;
+    border-radius: 50%;
+}
+
+.left-ear {
+    left: -19px;
+}
+
+.right-ear {
+    right: -18px;
+}
+
+/* ดวงตา */
+.eye:first-child{
+    width: 45px;
+    height: 30px;
+    left: 45px;
+    background-color: white;
+    border-radius: 100px 500px 50px 50px;
+    position: absolute;
+    top: 50px;
+    border-left: 4px solid rgba(0, 0, 0, 0.603);
+    border-bottom: 8px solid rgba(0, 0, 0, 0.603);
+
+}
+.eye:nth-child(2){
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    border-radius: 500px 100px 50px 50px;
+    position: absolute;
+    top: 50px;
+}
+
+.left-eye {
+    left: 50px;
+}
+
+.right-eye {
+    right: 50px;
+}
+
+.eye::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    background-color: rgb(125, 207, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+}
+
+/* จมูก */
+.nose {
+    width: 10px;
+    height: 30px;
+    background-color: #d4af80;
+    border-radius: 20px 20px 50% 50%;
+    position: absolute;
+    top: 80px;
+    border-left: 10px solid rgba(0, 0, 0, 0.76);
+}
+
+/* ปาก */
+.mouth {
+    width: 60px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50px 50px 0px 0px;
+    position: absolute;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    top: 130px;
+   
+}
+
+.mouth::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 50px 50px 0px 0px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+.neck{
+    position: absolute;
+    width: 150px;
+    height: 140px;
+    z-index: -1;
+    top: 120px;
+    left: 25px;
+    background-color: #d4af80;
+   
+}
+.hair {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #2b2b2b;
+    top: -30px;
+    left: 13px;
+    z-index: 2;
+    clip-path: polygon(51% 0, 100% 0, 97% 99%, 79% 69%, 71% 85%, 60% 72%, 39% 98%, 26% 85%, 16% 99%, 2% 81%, 4% 0);
+
+}
+
+
+.hair::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    border-radius: 50%;
+    top: 90px;
+    left: 50px;
+   
+}

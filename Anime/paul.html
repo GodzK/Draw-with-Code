@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Card</title>
+    <link rel="stylesheet" href="./paul.css">
+</head>
+<body>
+    <div class="card">
+        <div id="cartoon" role="img" aria-labelledby="description">
+            <div class="body"></div>
+            <div class="ear"></div>
+            <div class="ear"></div>
+            <div class="neck"></div>
+            <div class="hair-back"></div>
+            <div class="face">
+                <div class="cheeks"></div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                    <div class="eyelid"></div>
+                </div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                    <div class="eyelid"></div>
+                </div>
+                <div class="mouth"></div>
+                <div class="freckles"></div>
+                <div class="nose"></div>
+            </div>
+            <div class="hair-top"></div>
+        </div>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const pupils = document.querySelectorAll('.pupil');
+        const eyelids = document.querySelectorAll('.eyelid');
+    
+
+        usernameInput.addEventListener('focus', () => {
+            pupils.forEach(pupil => {
+                pupil.style.transform = 'translate(0, -4vmin)'; 
+            });
+            eyelids.forEach(eyelid => {
+                eyelid.style.height = '0'; 
+            });
+        });
+    
+    
+        passwordInput.addEventListener('focus', () => {
+            pupils.forEach(pupil => {
+                pupil.style.transform = 'translate(0, 0)'; 
+            });
+            eyelids.forEach(eyelid => {
+                eyelid.style.height = '100%'; 
+            });
+        });
+    
+    
+        usernameInput.addEventListener('blur', resetEyes);
+        passwordInput.addEventListener('blur', resetEyes);
+    
+        function resetEyes() {
+            if (!usernameInput.matches(':focus') && !passwordInput.matches(':focus')) {
+                pupils.forEach(pupil => {
+                    pupil.style.transform = 'translate(0, 0)'; 
+                });
+                eyelids.forEach(eyelid => {
+                    eyelid.style.height = '0';
+                });
+            }
+        }
+    });
+            </script>
+</body>
+</html>
